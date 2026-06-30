@@ -1,7 +1,7 @@
 # Estágio 1: Build da aplicação usando Maven e Java 21
 FROM maven:3.9.6-eclipse-temurin-21 AS build
 WORKDIR /app
-COPY . .
+COPY sgrr/ .
 RUN mvn clean package -DskipTests
 
 # Estágio 2: Execução da aplicação usando JRE 21 leve
